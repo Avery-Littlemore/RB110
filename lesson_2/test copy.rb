@@ -12,14 +12,11 @@ customer_orders = {}
 
 order_data.each do |row|
   if customer_orders.key?(row[:customer_id])
-    p 'if yes'
     customer_orders[row[:customer_id]][:orders] << {
       order_fulfilled: row[:order_fulfilled],
       order_value: row[:order_value]
     }
   else
-    p 'if no'
-    p row[:customer_id]
     customer_orders[row[:customer_id]] = {
       customer_id: row[:customer_id],
       customer_name: row[:customer_name],
