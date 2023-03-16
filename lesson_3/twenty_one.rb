@@ -79,7 +79,7 @@ loop do
         player_cards << select_card!(deck)
         player_total = summate(player_cards)
         if player_total > MAX
-          prompt "BUSTED! After drawing #{player_cards.last}, your hand total is #{player_total}." \
+          prompt "BUSTED! After drawing #{player_cards.last}, your hand total is #{player_total}. " \
                  'Better luck next time!'
           dealer_score += 1
           break
@@ -100,6 +100,7 @@ loop do
           end
           prompt "Dealer hits and has: #{cards_in_hand(dealer_cards)} (total = #{dealer_total})"
         end
+
         if dealer_total == player_total
           prompt 'Tie goes to the Dealer, unlucky!'
           dealer_score += 1

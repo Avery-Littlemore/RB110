@@ -1,0 +1,32 @@
+## Problem
+1. Initialize deck
+2. Deal cards to player and dealer
+3. Player turn: hit or stay
+  - repeat until bust or "stay"
+4. If player bust, dealer wins.
+5. Dealer turn: hit or stay
+  - repeat until total >= 17
+6. If dealer bust, player wins.
+7. Compare cards and declare winner.
+
+Output: 
+  - your cards
+  - dealers cards
+  - hit or stay?
+
+Input: hit or stay
+
+Rules: if hand total is over 21, you lose
+
+## Examples/Test Cases
+
+## Data Structures
+Cards -> Nested Arrays
+Deck -> key = suit, value = cards Arrays
+
+## Algorithm
+Select cards one at a time
+  - Once a card has been selected, it will be deleted from the array
+  - First card to user, second to dealer, repeat until 2cards each
+Print to screen user's cards and dealer's first card
+
